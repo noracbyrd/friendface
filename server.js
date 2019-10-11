@@ -2,6 +2,10 @@
 var express = require("express");
 var path = require("path");
 
+// requiring our routes files (might need to remove the .js?)
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
+
 // Sets up the Express App
 var app = express();
 
