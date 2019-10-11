@@ -26,5 +26,5 @@ function Friend(){
 }
 
 module.exports = friends;
-//might have to tweak the below
+// @ might have to tweak the below
 module.exports = Friend;
