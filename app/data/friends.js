@@ -18,4 +18,13 @@ let friends = [
     }
 ]
 
+// friend constructor function to make adding friends easier
+function Friend(){
+    this.name = name;
+    this.photo = photo;
+    this.scores = scores;
+}
+
 module.exports = friends;
+//might have to tweak the below
+module.exports = Friend;
