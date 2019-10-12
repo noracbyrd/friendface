@@ -2,9 +2,6 @@
 var express = require("express");
 var path = require("path");
 
-// requiring our routes files (might need to remove the .js?)
-require("./routes/apiRoutes.js")(app);
-require("./routes/htmlRoutes.js")(app);
 
 // Sets up the Express App
 var app = express();
@@ -15,6 +12,11 @@ var PORT = process.env.PORT || 8022;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// requiring our routes files (might need to remove the .js?)
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
+
 
 // server listener!
 app.listen(PORT, function() {

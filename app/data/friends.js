@@ -25,6 +25,7 @@ function Friend(){
     this.scores = scores;
 }
 
-module.exports = friends;
-// @ might have to tweak the below
-module.exports = Friend;
+module.exports = {
+    friends,
+    Friend
+}
