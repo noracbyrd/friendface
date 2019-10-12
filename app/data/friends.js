@@ -1,9 +1,9 @@
 // dummy data for testing
 let friends = [
     {
-        "name": "Ariel",
-        "photo": "https://upload.wikimedia.org/wikipedia/en/7/77/Ariel_disney.png",
-        "scores": [
+        name: "Ariel",
+        picture: "https://upload.wikimedia.org/wikipedia/en/7/77/Ariel_disney.png",
+        scores: [
             5,
             1,
             4,
@@ -19,10 +19,10 @@ let friends = [
 ]
 
 // friend constructor function to make adding friends easier
-function Friend(){
+function Friend(name,picture){
     this.name = name;
-    this.photo = photo;
-    this.scores = scores;
+    this.picture = picture;
+    // this.score = [question1,question2,question3,question4,question5,question6,question7,question8,question9,question10];
 }
 
 module.exports = {

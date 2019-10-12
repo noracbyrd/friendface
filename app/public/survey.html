@@ -1,133 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <form action="../routing/apiRoutes" method="get">
+        <form action="/api/friends" method="POST">
             <!-- @ need the linky-thing-->
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Name (Required)</label>
-                <textarea class="form-control" id="name" rows="1"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Link to Profile Image (Required)</label>
-                <textarea class="form-control" id="picture" rows="1"></textarea>
-              </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">You love to sing.</label>
-              <select class="form-control" id="question1">
-                <option>1 (Strongly Disagree)</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 (Strongly Agree)</option>
-              </select>
+                <label for="name">Name (Required)</label>
+                <textarea name="name" class="form-control" id="name" rows="1"></textarea>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question2">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question3">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question4">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question5">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question6">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question7">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question8">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question9">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">You love to sing.</label>
-                <select class="form-control" id="question10">
-                  <option>1 (Strongly Disagree)</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5 (Strongly Agree)</option>
-                </select>
-              </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Example textarea</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="picture">Link to Profile Image (Required)</label>
+                <textarea name="picture" class="form-control" id="picture" rows="1"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-      </div>
+            <div class="form-group">
+                <label for="question1">You love to sing.</label>
+                <select name="question1" class="form-control" id="question1">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question2">You love to sing.</label>
+                <select name="question2" class="form-control" id="question2">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question3">You love to sing.</label>
+                <select name="question3" class="form-control" id="question3">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question4">You love to sing.</label>
+                <select name="question4" class="form-control" id="question4">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question5">You love to sing.</label>
+                <select name="question5" class="form-control" id="question5">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question6">You love to sing.</label>
+                <select name="question6" class="form-control" id="question6">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question7">You love to sing.</label>
+                <select name="question7" class="form-control" id="question7">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question8">You love to sing.</label>
+                <select name="question8" class="form-control" id="question8">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question9">You love to sing.</label>
+                <select name="question9" class="form-control" id="question9">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question10">You love to sing.</label>
+                <select name="question10" class="form-control" id="question10">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </body>
-</html>
+<script src="../formlink"></script>
 
-3. form: action = (where you get the data) "local: '/'"
-	method = (have to choose! post eg or get)
+</html>
