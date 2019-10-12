@@ -31,6 +31,13 @@ let friends = [
         ]
     },
     {
+        name: "floopy",
+        picutre: "http://ryanabney.com/lucille.gif",
+        scores: [
+            2,3,3,3,3,3,3,3,3,3
+        ]
+    },
+    {
         name: "flounder",
         picture: "http://ryanabney.com/lucille.gif",
         scores: [

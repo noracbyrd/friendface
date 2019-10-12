@@ -1,0 +1,24 @@
+-- @ MAKE SURE TO GET RID OF THIS --
+DROP DATABASE IF EXISTS friendface;
+
+
+CREATE DATABASE friendface;
+
+USE friendface;
+
+CREATE TABLE friends (
+  id INTEGER(10) AUTO_INCREMENT NOT NULL,
+  name VARCHAR(30) NOT NULL,
+  picture VARCHAR(100) NOT NULL,
+  question1 INTEGER(2) NOT NULL,
+  question2 INTEGER(2) NOT NULL,
+  question3 INTEGER(2) NOT NULL,
+  question4 INTEGER(2) NOT NULL,
+  question5 INTEGER(2) NOT NULL,
+  question6 INTEGER(2) NOT NULL,
+  question7 INTEGER(2) NOT NULL,
+  question8 INTEGER(2) NOT NULL,
+  question9 INTEGER(2) NOT NULL,
+  question10 INTEGER(2) NOT NULL,
+  PRIMARY KEY(id)
+);
