@@ -1,7 +1,6 @@
 -- @ MAKE SURE TO GET RID OF THIS --
 DROP DATABASE IF EXISTS friendface;
 
-
 CREATE DATABASE friendface;
 
 USE friendface;

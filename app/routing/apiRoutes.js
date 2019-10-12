@@ -2,7 +2,8 @@
 var path = require("path");
 // @ might need to remove .js?
 var friends = require("../data/friends");
-var Friend = require("../data/Friend")
+var Friend = require("../data/Friend");
+var match = require("../data/modal");
 
 // setting up the whole function within a module export
 module.exports = function(app){
@@ -30,7 +31,7 @@ module.exports = function(app){
             console.log("here is scores.comp");
             console.log(scoresComp);
             allScores.push(scoresComp.reduce((accumulator, currentValue) => accumulator + currentValue));
-           
+          
 
 
         }
@@ -38,7 +39,11 @@ module.exports = function(app){
         console.log(allScores.indexOf(Math.min(...allScores)));
         console.log(allScores);
         console.log(friends[allScores.indexOf(Math.min(...allScores))]);
+        let modalName = friends[allScores.indexOf(Math.min(...allScores))].name;
+        let modalPictureURL = friends[allScores.indexOf(Math.min(...allScores))].picture;
         // @ need modal HERE before new person gets put into data
+        
+        // @ eventually add logic to add new friend
         // friends.friends.push(newFriend);
         // console.log("this is friends.friends after a new one should have been added");
         // console.log(friends);
@@ -52,11 +57,3 @@ module.exports = function(app){
       });
 };
 
-// loop through each friend in api/friends
-// for (var i = 0; i<res.length; i++){
-//     for 
-    //probably need interlocking for loops, CAN FIGURE IT OUT TOMORROW
-    //compare arrays
-    //store total in another array
-    //from new  array, return lowest number (gotta be a method for that)
-// }
