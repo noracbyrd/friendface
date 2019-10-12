@@ -12,7 +12,7 @@ module.exports = function(app){
     });
     app.post("/api/friends", function(req,res){
         // @ stupid hardcode array
-        let newFriend = new friends.Friend(req.body.name,req.body.picture);
+        let newFriend = new friends.Friend(req.body.name,req.body.picture,parseInt(req.body.question1),parseInt(req.body.question2),parseInt(req.body.question3),parseInt(req.body.question4),parseInt(req.body.question5),parseInt(req.body.question6),parseInt(req.body.question7),parseInt(req.body.question8),parseInt(req.body.question9),parseInt(req.body.question10));
         console.log("this is the request body");
         console.log(req.body.friend);
         console.log(newFriend);
