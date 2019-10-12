@@ -13,7 +13,6 @@ module.exports = function(app){
         console.log(friends);
     });
     app.post("/api/friends", function(req,res){
-        // @ stupid hardcode array
         let newFriend = new Friend(req.body.name,req.body.picture,parseInt(req.body.question1),parseInt(req.body.question2),parseInt(req.body.question3),parseInt(req.body.question4),parseInt(req.body.question5),parseInt(req.body.question6),parseInt(req.body.question7),parseInt(req.body.question8),parseInt(req.body.question9),parseInt(req.body.question10));
         console.log(friends);
         console.log(newFriend);
@@ -44,10 +43,10 @@ module.exports = function(app){
         // @ need modal HERE before new person gets put into data
         
         // @ eventually add logic to add new friend
-        // friends.friends.push(newFriend);
+        friends.push(newFriend);
         // console.log("this is friends.friends after a new one should have been added");
         // console.log(friends);
-        res.json(friends);
+        res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
     // @ keeping this in for testing purposes
     app.post("/api/clear", function(req, res) {

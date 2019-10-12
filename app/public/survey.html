@@ -14,7 +14,6 @@
 <body>
     <div class="container">
         <form action="/api/friends" method="POST">
-            <!-- @ need the linky-thing-->
             <div class="form-group">
                 <label for="name">Name (Required)</label>
                 <textarea name="name" class="form-control" id="name" rows="1"></textarea>
@@ -124,7 +123,7 @@
                     <option>5</option>
                 </select>
             </div>
-            <button type="submit" id="submit" class="btn btn-primary" data-toggle="modal"
+            <button type="submit" href="#" id="submit" class="btn btn-primary" data-toggle="modal"
                 data-target="#matchModal">Submit</button>
         </form>
         <!-- Modal -->
@@ -151,7 +150,14 @@
         </div>
 
     </div>
-
+    <!-- <script type="text/javascript">
+        console.log("test");
+        $("#submit").on("click", function () {
+            $('#matchModal').modal({
+                keyboard: false
+            })
+        })
+    </script> -->
 </body>
 
 
