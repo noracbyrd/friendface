@@ -6,195 +6,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
 <body>
     <div class="container">
-       
-            <!-- @ Image and text -->
-<nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
-          friendFace Survey
-        </a>
-      </nav>
-     <br>
+
+        <!-- @ Image and text -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+                friendFace Survey
+            </a>
+        </nav>
+        <br>
         <div class="row">
             <div class="col-md-2">
                 <!--empty div for spacing-->
             </div>
             <div class="col-md-8">
-        <form action="/api/friends" method="POST">
-            <div id="personal">
-                <h4>About You</h4>
-            <div class="form-group">
-                <label for="name">Name (Required)</label>
-                <textarea name="name" class="form-control" id="name" rows="1"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="picture">Link to Profile Image (Required)</label>
-                <textarea name="picture" class="form-control" id="picture" rows="1"></textarea>
-            </div>
-        </div>
-        <br>
-        <div id="survey">
-            <h5>Please answer the following questions.</h5>
-            <h6>The scale is: 1 to Strongly Disagree, 5 to Strongly Agree, 3 for Neutral.</h6>
-            <br>
-            <div class="form-group">
-                <h5>Question 1</h5>
-                <label for="question1">You love to sing.</label>
-                <select name="question1" class="form-control" id="question1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 2</h5>
-                <label for="question2">You have a loveable animal sidekick.</label>
-                <select name="question2" class="form-control" id="question2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 3</h5>
-                <label for="question3">You love to be near water.</label>
-                <select name="question3" class="form-control" id="question3">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 4</h5>
-                <label for="question4">Family always comes first.</label>
-                <select name="question4" class="form-control" id="question4">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 5</h5>
-                <label for="question5">You'd rather dress practically than fashionably.</label>
-                <select name="question5" class="form-control" id="question5">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 6</h5>
-                <label for="question6">You enjoy spending time alone.</label>
-                <select name="question6" class="form-control" id="question6">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 7</h5>
-                <label for="question7">You're a big city person.</label>
-                <select name="question7" class="form-control" id="question7">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 8</h5>
-                <label for="question8">You're a hopeless romantic.</label>
-                <select name="question8" class="form-control" id="question8">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 9</h5>
-                <label for="question9">You love to travel.</label>
-                <select name="question9" class="form-control" id="question9">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <h5>Question 10</h5>
-                <label for="question10">You often get lost in your imagination.</label>
-                <select name="question10" class="form-control" id="question10">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-        </div>
-            <button type="submit" href="#" id="submit" class="btn btn-primary" data-toggle="modal"
-                data-target="#matchModal">Submit</button>
-        </form>
-        <br>
-        </div>
-        <div class="col-md-2">
-            <!--empty div for spacing-->
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                <form>
+                    <div id="personal">
+                        <h4>About You</h4>
+                        <div class="form-group">
+                            <label for="name">Name (Required)</label>
+                            <textarea name="name" class="form-control" id="name" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="picture">Link to Profile Image (Required)</label>
+                            <textarea name="picture" class="form-control" id="picture" rows="1"></textarea>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <p id="matchName"></p>
-                        <span id="matchPicture"></span>
+                    <br>
+                    <div id="survey">
+                        <h5>Please answer the following questions.</h5>
+                        <h6>The scale is: 1 to Strongly Disagree, 5 to Strongly Agree, 3 for Neutral.</h6>
+                        <br>
+                        <div class="form-group">
+                            <h5>Question 1</h5>
+                            <label for="question1">You love to sing.</label>
+                            <select name="question1" class="form-control" id="question1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 2</h5>
+                            <label for="question2">You have a loveable animal sidekick.</label>
+                            <select name="question2" class="form-control" id="question2">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 3</h5>
+                            <label for="question3">You love to be near water.</label>
+                            <select name="question3" class="form-control" id="question3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 4</h5>
+                            <label for="question4">Family always comes first.</label>
+                            <select name="question4" class="form-control" id="question4">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 5</h5>
+                            <label for="question5">You'd rather dress practically than fashionably.</label>
+                            <select name="question5" class="form-control" id="question5">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 6</h5>
+                            <label for="question6">You enjoy spending time alone.</label>
+                            <select name="question6" class="form-control" id="question6">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 7</h5>
+                            <label for="question7">You're a big city person.</label>
+                            <select name="question7" class="form-control" id="question7">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 8</h5>
+                            <label for="question8">You're a hopeless romantic.</label>
+                            <select name="question8" class="form-control" id="question8">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 9</h5>
+                            <label for="question9">You love to travel.</label>
+                            <select name="question9" class="form-control" id="question9">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h5>Question 10</h5>
+                            <label for="question10">You often get lost in your imagination.</label>
+                            <select name="question10" class="form-control" id="question10">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+
+                    <a href="ajax.html" id="manual-ajax"><button type="submit" href="#" id="submit"
+                            class="btn btn-primary" data-toggle="modal" data-target="#matchModal">Submit</button></a>
+
+                </form>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <!--empty div for spacing-->
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            text
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
-    </div>
+
     <script type="text/javascript">
-        console.log("test");
-        $("#submit").on("click", function () {
-            $('#matchModal').modal({
-                keyboard: false
-            })
-        })
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+            $('#matchModal').modal('show');
+            var addedFriend = {
+                name: $("#name").val().trim(),
+                picture: $("#picture").val().trim(),
+                question1: $("#question1").val(),
+                question2: $("#question2").val(),
+                question3: $("#question3").val(),
+                question4: $("#question4").val(),
+                question5: $("#question5").val(),
+                question6: $("#question6").val(),
+                question7: $("#question7").val(),
+                question8: $("#question8").val(),
+                question9: $("#question9").val(),
+                question10: $("#question10").val()
+            };
+
+            $('#manual-ajax').click(function (event) {
+                event.preventDefault();
+                this.blur(); 
+                // @ this part needs help
+                $.get("/api/friends", function (html) {
+                    $(html).appendTo('body').modal();
+                });
+            });
+
+            $.post("/api/friends", addedFriend,
+                function (data) {
+
+                    // Clear the form when submitting
+                    $("#name").val("");
+                    $("#picture").val("");
+                    $("#question1").val("");
+                    $("#question2").val("");
+                    $("#question3").val("");
+                    $("#question4").val("");
+                    $("#question5").val("");
+                    $("#question6").val("");
+                    $("#question7").val("");
+                    $("#question8").val("");
+                    $("#question9").val("");
+                    $("#question10").val("");
+                });
+
+
+        });
+
     </script>
 </body>
 

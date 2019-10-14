@@ -1,13 +1,17 @@
 // getting the packages required
 var express = require("express");
 var path = require("path");
-
+var mysql = require("mysql");
 
 // Sets up the Express App
 var app = express();
 
 // Set the port of our application (heroku if availale)
 var PORT = process.env.PORT || 8022;
+
+
+
+
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
