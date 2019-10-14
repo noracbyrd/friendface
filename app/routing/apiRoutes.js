@@ -58,16 +58,16 @@ module.exports = function (app) {
         let modalName = friends[allScores.indexOf(Math.min(...allScores))].name;
         let modalPictureURL = friends[allScores.indexOf(Math.min(...allScores))].picture;
         // @ need modal HERE before new person gets put into data
-        
-        // @ eventually add logic to add new friend
-        friends.push(newFriend);
-        // console.log("this is friends.friends after a new one should have been added");
-        // console.log(friends);
         let jsonObj = {
             name: modalName,
             picture: modalPictureURL
         }
         res.json(jsonObj);
+        // @ eventually add logic to add new friend
+        friends.push(newFriend);
+        // console.log("this is friends.friends after a new one should have been added");
+        // console.log(friends);
+
 
 
 
