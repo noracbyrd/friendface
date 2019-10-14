@@ -63,7 +63,11 @@ module.exports = function (app) {
         friends.push(newFriend);
         // console.log("this is friends.friends after a new one should have been added");
         // console.log(friends);
-        res.json();
+        let jsonObj = {
+            name: modalName,
+            picture: modalPictureURL
+        }
+        res.json(jsonObj);
 
 
 
