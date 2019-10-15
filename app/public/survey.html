@@ -16,7 +16,7 @@
 
 <body>
     <div class="container">
-       
+
         <!-- @ Image and text -->
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="#">
@@ -158,8 +158,8 @@
                             </select>
                         </div>
                     </div>
-                    
-                    <button type="submit" href="#" id="submit" class="btn btn-primary">Submit</button>
+
+                    <button type="submit" href="#" id="submit" class="btn btn-secodary">Submit</button>
 
                 </form>
                 <br>
@@ -167,26 +167,23 @@
             <div class="col-md-2">
                 <!--empty div for spacing-->
             </div>
-            <div id="myModal" class="modal">
             <!-- Modal -->
+            <div id="myModal" class="modal">
                 <!-- Modal content -->
-                <div class="modal-content">
-                    <button class="close">X</button>
+                <div class="modal-content" id="theContent">
+                    <button class="close btn-secondary">X</button>
                     <p id="matchName">Some text in the Modal..</p>
                     <div id="matchPicture"></div>
                 </div>
-
             </div>
-        
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <script type="text/javascript">
-
+        // setting up the onclick to post the data to the backend
         $("#submit").on("click", function (event) {
             event.preventDefault();
-
+            // grabbing all the answers
             var addedFriend = {
                 name: $("#name").val().trim(),
                 picture: $("#picture").val().trim(),
@@ -201,21 +198,13 @@
                 question9: $("#question9").val(),
                 question10: $("#question10").val()
             };
-
-
-
+            // sending the answers to the api/friends route
             $.post("/api/friends", addedFriend,
                 function (data) {
-                    console.log(data);
-
-
-
+                    // setting up the modal first
                     var modal = document.getElementById("myModal");
-
-                    // Get the button that opens the modal
                     modal.style.display = "block";
-
-
+                    // populating the modal with the friend match
                     $("#matchName").text(data.name);
                     $("#matchPicture").html(`<img src=${data.picture} alt="match image of ${data.name}">`);
                     // @ this part needs help
@@ -232,33 +221,40 @@
                     // $("#question8").val("");
                     // $("#question9").val("");
                     // $("#question10").val("");
-
                     // Get the <span> element that closes the modal
                     var span = document.getElementsByClassName("close")[0];
-
-
-
                     // When the user clicks on <span> (x), close the modal
                     span.onclick = function () {
                         modal.style.display = "none";
                     }
-
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function (event) {
                         if (event.target == modal) {
                             modal.style.display = "none";
                         }
                     }
-
-
-
                 });
-
         });
 
-
-
-
+        $.post("/api/easteregg", addedFriend,
+            function (data) {
+                var modal = document.getElementById("myModal");
+                // Get the button that opens the modal
+                modal.style.display = "block";
+                $("#matchName").text(data.name);
+                $("#matchPicture").html(`<img src=${data.picture} alt="match image of ${data.name}">`);
+                var span = document.getElementsByClassName("close")[0];
+              // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            });
     </script>
 </body>
 

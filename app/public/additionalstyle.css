@@ -1,7 +1,8 @@
-/* The Modal (background)
-/* body.modal-open {
-    overflow: hidden;
-} */
+.jumbotron{
+    border: 20px solid #000000;
+    border-radius: 10px;
+}
+/* for when the modal closes/close button */
 .close {
     color: #aaa;
     float: right;
@@ -15,11 +16,11 @@
   text-decoration: none;
   cursor: pointer;
 }
-  /* Modal Content/Box */
-  .modal-content {
+  /* Modal Content Box */
+  #theContent {
     background-color: #fefefe;
-    /* margin: 50% auto; */
-    /* padding: 20px; */
+    margin: 50% auto;
+    padding: 20px;
     border: 50px solid #888;
     left: 300px; 
     top: 300px;
@@ -27,22 +28,25 @@
    width: 50%;
     position: fixed;
   }
-.modal {
-    /* margin: 50% auto; */
-    display: none; /* Hidden by default */
-    /* position: fixed;  */
-    z-index: 100; /* Sit on top */
-    /* left: 300px;
-    top: 300px; */
+#myModal {
+    margin: 50% auto;
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 300px;
+    top: 300px;
     width: 50%;
-    /* height: 50%; */
+    height: 50%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
+  body {
+    background-image: url("images/friendface.jpg");
+    background-repeat: repeat-y;
+  }
 
   
-  /* The Close Button */
+
 
    
