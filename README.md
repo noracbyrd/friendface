@@ -43,3 +43,4 @@ Once the user's data reaches the backend, the user's scores are compared to all 
 * I managed to get the database linked - the user's entries are saved in the database and can be displayed via the wee easter egg on the homepage. But, it would be extra nice to actually use a database query for the logic, and not only run the logic from the API. 
 * The modal. Oh lawd, the modal. It is extremely basic right now - displays the text and image it's supposed to but MY does it look ghastly.
 * Currently users can get away with not entering their name or profile picture. It would be good to make that impossible.
+* Would be nice to have some semblance of design...I tried to use a background image, and that image shows up locally, but I guess Heroku doesn't like it. 
