@@ -15,13 +15,19 @@ This project riffs on the ubiquitous dating app. The user enters their name and 
 The [very basic] landing page presents the user with the main option of beginning a survey. 
 There are links at the bottome to the API data dump, the github repo, and a wee surprise (which is essentially the API data dump except it pulls images from the database which I have linked to but not actually used logic from. See future improvements, ha!)
 
+![Landing page](app/public/images/home.png)
+
 ### 2. The Survey
 
 On the survey page, the user enters their information and clicks the submit button. On the button click, the user's data input is sent to the backend via a jquery ajax call, and is also stored into the friendface database. 
 
+![Survey](app/public/images/survey.png)
+
 ### 3. The Results
 
 Once the user's data reaches the backend, the user's scores are compared to all the scores saved in the API. The user is then shown a [very scary] modal that displays their match and their match's profile picture! 
+
+![very scary modal](app/public/images/scarymodal.png)
 
 ## Technologies
 * jQuery
