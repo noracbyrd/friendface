@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
     <link rel="stylesheet" type="text/css" href="additionalstyle.css">
 </head>
 
@@ -34,11 +32,11 @@
                     <div id="personal">
                         <h4>About You</h4>
                         <div class="form-group">
-                            <label for="name">Name (Required)</label>
+                            <label required for="name">Name (Required)</label>
                             <textarea name="name" class="form-control" id="name" rows="1"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="picture">Link to Profile Image (Required)</label>
+                            <label required for="picture">Link to Profile Image (Required)</label>
                             <textarea name="picture" class="form-control" id="picture" rows="1"></textarea>
                         </div>
                     </div>
@@ -158,9 +156,7 @@
                             </select>
                         </div>
                     </div>
-
-                    <button type="submit" href="#" id="submit" class="btn btn-secodary">Submit</button>
-
+                    <button type="submit" href="#" id="submit" class="btn btn-secondary">Submit</button>
                 </form>
                 <br>
             </div>
@@ -171,7 +167,7 @@
             <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content" id="theContent">
-                    <button class="close btn-secondary">X</button>
+                    <button class="close btn-secondary">Close X</button>
                     <p id="matchName">Some text in the Modal..</p>
                     <div id="matchPicture"></div>
                 </div>
@@ -205,22 +201,9 @@
                     var modal = document.getElementById("myModal");
                     modal.style.display = "block";
                     // populating the modal with the friend match
-                    $("#matchName").text(data.name);
+                    // warning, this is a very scary modal
+                    $("#matchName").text(`Congratulations, you matched with ${data.name}!`);
                     $("#matchPicture").html(`<img src=${data.picture} alt="match image of ${data.name}">`);
-                    // @ this part needs help
-                    // Clear the form when submitting
-                    // $("#name").val("");
-                    // $("#picture").val("");
-                    // $("#question1").val("");
-                    // $("#question2").val("");
-                    // $("#question3").val("");
-                    // $("#question4").val("");
-                    // $("#question5").val("");
-                    // $("#question6").val("");
-                    // $("#question7").val("");
-                    // $("#question8").val("");
-                    // $("#question9").val("");
-                    // $("#question10").val("");
                     // Get the <span> element that closes the modal
                     var span = document.getElementsByClassName("close")[0];
                     // When the user clicks on <span> (x), close the modal
@@ -235,28 +218,6 @@
                     }
                 });
         });
-
-        $.post("/api/easteregg", addedFriend,
-            function (data) {
-                var modal = document.getElementById("myModal");
-                // Get the button that opens the modal
-                modal.style.display = "block";
-                $("#matchName").text(data.name);
-                $("#matchPicture").html(`<img src=${data.picture} alt="match image of ${data.name}">`);
-                var span = document.getElementsByClassName("close")[0];
-              // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            });
     </script>
 </body>
-
-
 </html>

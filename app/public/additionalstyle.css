@@ -1,3 +1,10 @@
+body {
+  background-image: url("images/friendface.jpg");
+  background-repeat: repeat;
+}
+.container{
+  background: #ffffff;
+}
 .jumbotron{
     border: 20px solid #000000;
     border-radius: 10px;
@@ -40,10 +47,6 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  body {
-    background-image: url("images/friendface.jpg");
-    background-repeat: repeat-y;
   }
 
   
